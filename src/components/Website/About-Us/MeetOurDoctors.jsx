@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import MeetDoctor from "../../../assets/Meetdoctor.png";
+import MeetDoctor from "../../../assets/MeetDoctor.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const MeetWithOurDoctor = () => {
