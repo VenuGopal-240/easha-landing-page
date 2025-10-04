@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Avatar } from "@mui/material";
 import SearchIcon from "../../../../assets/search.svg";
-import CheckIcon from "../../../../assets/Done.svg";
+import CheckIcon from "../../../../assets/done.svg";
 import CalendarTodayIcon from "../../../../assets/Daterange.svg";
 
 const steps = [
