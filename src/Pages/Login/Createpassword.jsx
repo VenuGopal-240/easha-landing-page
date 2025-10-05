@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useLocation } from "react-router-dom";
 
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 import Eashalogo from "../../assets/Eashalogo.png";
 
 
@@ -143,7 +143,7 @@ const doctorId = location.state?.doctorId || null;
 
     try {
       const res = await fetch(
-        "http://localhost:5000/api/doctors/forgot-password/reset",
+        `${API_BASE_URL}/api/doctors/forgot-password/reset`,
         {
           method: "POST",
           headers: {

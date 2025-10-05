@@ -2,8 +2,8 @@ import logo from "../../assets/Eashalogo.png";
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
-const API_URL = "http://localhost:5000";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+// const API_URL = "http://localhost:5000";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -52,7 +52,7 @@ const sendOtp = async () => {
       mobile: !isEmail ? identifier.trim() : undefined,
     };
 
-    const res = await fetch(`${API_URL}/api/doctors/login/request-otp`, {
+    const res = await fetch(`${API_BASE_URL}/api/doctors/login/request-otp`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -83,7 +83,7 @@ const resendOtp = async () => {
       doctorId, // Include here
     };
 
-    const res = await fetch(`${API_URL}/api/doctors/login/resend-login-otp`, {
+    const res = await fetch(`${API_BASE_URL}/api/doctors/login/resend-login-otp`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -110,7 +110,7 @@ const verifyOtp = async () => {
       doctorId,
     };
 
-    const res = await fetch(`${API_URL}/api/doctors/login/verify-otp`, {
+    const res = await fetch(`${API_BASE_URL}/api/doctors/login/verify-otp`, {
       method: "POST",
       headers: { "Content-Type": "application/json",doctorId: doctorId },
       body: JSON.stringify(payload),
@@ -178,7 +178,7 @@ const verifyOtp = async () => {
         };
         Object.keys(payload).forEach((key) => !payload[key] && delete payload[key]);
 
-        const res = await fetch(`${API_URL}/api/doctors/login`, {
+        const res = await fetch(`${API_BASE_URL}/api/doctors/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),

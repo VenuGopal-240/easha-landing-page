@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import Eashalogo from "../../assets/Eashalogo.png";
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const Forgotpassword = () => {
   const navigate = useNavigate();
 
@@ -92,7 +92,7 @@ onSubmit={async (values, { setSubmitting }) => {
         : { verifyBy, mobile: values.identifier };
 
     const res = await fetch(
-      "http://localhost:5000/api/doctors/forgot-password/request-otp",
+      `${API_BASE_URL}/api/doctors/forgot-password/request-otp`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

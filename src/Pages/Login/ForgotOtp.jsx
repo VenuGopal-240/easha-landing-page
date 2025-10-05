@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../../assets/Eashalogo.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const ForgotOtp = () => {
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [error, setError] = useState(false);
@@ -51,7 +51,7 @@ const verifyOTP = async () => {
       };
 
     const res = await fetch(
-      "http://localhost:5000/api/doctors/forgot-password/verify-otp",
+      `${API_BASE_URL}/api/doctors/forgot-password/verify-otp`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json",doctorId:doctorId, },
@@ -94,7 +94,7 @@ const resendOTP = async () => {
         : { verifyBy, mobile: identifier, doctorId };
 
     const res = await fetch(
-      "http://localhost:5000/api/doctors/resend-forgot-password-otp",
+      `${API_BASE_URL}/api/doctors/resend-forgot-password-otp`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
