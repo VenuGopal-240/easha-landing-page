@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import { useLocation } from "react-router-dom";
 
 
-import EashaLogo from "../../assets/eAshalogo.png";
+import Eashalogo from "../../assets/Eashalogo.png";
 
 
 const Createpassword = () => {
@@ -119,7 +119,7 @@ const doctorId = location.state?.doctorId || null;
 
       <div className="text-center w-100" style={{ maxWidth: "420px" }}>
         <div className="logo-wrapper">
-          <img src={EashaLogo} alt="eAsha Logo" className="logo-img" />
+          <img src={Eashalogo} alt="eAsha Logo" className="logo-img" />
         </div>
 
         <h2

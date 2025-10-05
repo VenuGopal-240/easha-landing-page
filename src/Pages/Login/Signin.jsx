@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import eAshaLogo from "../../assets/eAshalogo.png";
+import Eashalogo from "../../assets/Eashalogo.png";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -335,7 +335,7 @@ function Signin() {
           {/* Right Section (Logo) */}
           <div className="col-12 col-md-5 d-flex justify-content-center align-items-center order-1 order-md-2">
             <img
-              src={eAshaLogo}
+              src={Eashalogo}
               alt="eAsha Healthcare"
               className="img-fluid img-logo"
             />

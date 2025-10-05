@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "../../assets/eAshalogo.png"; 
+import logo from "../../assets/Eashalogo.png"; 
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({

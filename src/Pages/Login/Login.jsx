@@ -1,4 +1,4 @@
-import logo from "../../assets/eAshalogo.png";
+import logo from "../../assets/Eashalogo.png";
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
