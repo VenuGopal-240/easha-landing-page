@@ -4,25 +4,30 @@ import Minus from "../../../../assets/Remove_Minus.svg";
 
 const faqData = [
   {
-    question: "Do I really pay nothing?",
-    answer: [
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "Lorem Ipsum has been the industry's standard dummy.",
-    ],
-  },
+  question: "Do I really pay nothing?",
+  answer: [
+    "Accessing general health information and browsing our platform is completely free.",
+    "However, booking appointments with verified healthcare professionals involves a transparent fee to ensure quality care and secure scheduling."
+  ]
+},
   {
     question: "Is my data secure?",
     answer: [
-      "Yes, we prioritize your privacy and use secure encryption methods.",
+      "Absolutely. We prioritize your privacy and use industry-standard encryption to protect your personal and medical information.",
+      "Our systems are regularly audited to ensure compliance with healthcare data regulations."
+
     ],
   },
   {
     question: "How do I reschedule?",
-    answer: ["You can reschedule your appointment from your dashboard."],
+    answer: [ "You can easily reschedule your appointment from your dashboard.",
+      "Just navigate to 'My Appointments' and select a new time slot that works for you."
+],
   },
   {
     question: "How do I get a refund?",
-    answer: ["Refunds are processed within 5-7 business days."],
+    answer: ["Refunds are processed within 5–7 business days after approval.",
+      "You’ll receive a confirmation email once your refund is initiated."],
   },
 ];
 

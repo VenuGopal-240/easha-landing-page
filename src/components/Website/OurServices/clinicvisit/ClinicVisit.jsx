@@ -6,7 +6,7 @@ import Dot from '../../../../assets/dot.svg'
 
 function ClinicVisit() {
   return (
-    <div><div className="mt-90  md:!mt-45 lg:!mt-15 xl:!mt-15 flex flex-col-reverse md:flex-row px-10">
+    <div><div className="mt-10  md:!mt-45 lg:!mt-15 xl:!mt-15 flex flex-col-reverse md:flex-row px-10">
 
   <div className="flex flex-col justify-center items-start md:w-[650px] lg:!w-[942px] lg:ml-[50px] ">
     <h3 className="flex items-center text-xl md:text-2xl !font-semibold lg:!text-[31px]">
@@ -32,7 +32,7 @@ function ClinicVisit() {
       </li>
     </ul>
 
-    <button className="mt-3 mb-3 lg:!w-50  lg:!mt-4 px-4 font-medium !text-[18px] py-2 bg-[#00917F] text-white !rounded-3xl">
+    <button className="mt-2 mb-5 lg:!w-50  lg:!mt-4 px-4 font-medium !text-[18px] py-2 bg-[#00917F] text-white !rounded-3xl">
       Find a clinic
     </button>
   </div>

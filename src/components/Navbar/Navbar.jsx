@@ -38,7 +38,7 @@ const Navbar = () => {
         <div className="login-signup-container pe-4">
           <NavLink to="/login" className="login-link">Login</NavLink>
           <span className="login-divider">/</span>
-          <NavLink to="/signup" className="signup-link">Sign Up</NavLink>
+          <NavLink to="/login" className="signup-link">Sign Up</NavLink>
         </div>
       </div>
     </nav>

@@ -11,11 +11,11 @@ const ServicesSection = () => {
           Our services
         </h2>
         <div className='text-center w-full'>
-        <p className="mt-4 !w-full !text-center md:text-xl xl:text-4xl xl:!mt-10 font-semibold ">
+        <p className="mt-5 !w-full !text-center md:text-xl xl:text-4xl xl:!mt-10 font-semibold ">
           Choose How You Want to Consult
         </p>
         </div>
-        <p className="mt-2   mx-auto text-sm md:text-base xl:!text-[18px] md:!w-[500px] lg:!w-[700px]">
+        <p className="mt-2   mx-10 text-sm md:text-base xl:!text-[18px] md:!w-[500px] lg:!w-[700px] text-justify">
           Book appointments for both in-clinic visits and virtual consultations
           tailored to your convenience and comfort.
         </p>
@@ -51,7 +51,7 @@ const ServicesSection = () => {
     <span>Instant booking with reminders</span>
   </li>
 </ul>
-          <button className="mt-4 px-3 py-2 lg:!w-50 text-[18px] font-medium bg-[#00917F]  text-white !rounded-3xl ">
+          <button className="mt-2 px-3 py-2 lg:!w-50 text-[18px] font-medium bg-[#00917F]  text-white !rounded-3xl ">
             Book online now
           </button>
         </div>

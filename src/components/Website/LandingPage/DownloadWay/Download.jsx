@@ -9,84 +9,53 @@ import "./Download.css";
 const DownloadSection = () => {
   return (
     <section className="w-full bg-white py-0 px-4 lg:py-0">
-      <div
-        className="w-full flex flex-col md:flex-row items-center justify-center md:items-center gap-8 md:gap-15"
-        style={{ margin: 0, padding: 0, lineHeight: 0 }}
-      >
-        <div
-          className="image-left flex justify-center md:justify-end w-full md:w-1/2"
-          style={{ margin: 0, padding: 0, lineHeight: 0 }}
-        >
-          <div
-            style={{ margin: 0, padding: 0, lineHeight: 0, display: "inline-block" }}
-          >
-            <img
-              src={mobileImg}
-              alt="Mobile Mockup"
-              className="rounded-3xl object-cover"
-              style={{
-                display: "block",
-                margin: 0,
-                padding: 0,
-                width: "450px",
-                maxWidth: "100%",
-                height: "auto",
-              }}
-            />
-          </div>
-          <style jsx>{`
-            /* Reset any vertical spacing */
-            .image-left,
-            .image-left > div,
-            img[alt="Mobile Mockup"] {
-              margin-top: 0 !important;
-              margin-bottom: 0 !important;
-              padding-top: 0 !important;
-              padding-bottom: 0 !important;
-              line-height: 0 !important;
-            }
+      <div className="w-full flex flex-col md:flex-row items-center justify-center md:items-center gap-8 md:gap-15">
+        
+        {/* LEFT IMAGE */}
+        <div className="image-left flex justify-center md:justify-end w-full md:w-1/2">
+          <img
+            src={mobileImg}
+            alt="Mobile Mockup"
+            className="mobile-mockup rounded-3xl object-cover w-full max-w-[450px] h-auto"
+          />
 
+          <style jsx>{`
             @media (max-width: 425px) {
-              img[alt="Mobile Mockup"] {
-                width: 220px !important;
+              .mobile-mockup {
+                max-width: 220px !important;
                 height: 250px !important;
               }
             }
-            @media (min-width: 500px) and (max-width: 767px) {
-              img[alt="Mobile Mockup"] {
-                width: 320px !important;
-                height: 370px !important;
-              }
-            }
-            @media (max-width: 639px) and (min-width: 426px) {
-              img[alt="Mobile Mockup"] {
-                width: 450px !important;
+            @media (min-width: 426px) and (max-width: 639px) {
+              .mobile-mockup {
+                max-width: 320px !important;
                 height: auto !important;
               }
             }
-            @media (min-width: 768px) and (max-width: 1023.98px) {
-              img[alt="Mobile Mockup"] {
-                width: 100% !important;
+            @media (min-width: 640px) and (max-width: 1023px) {
+              .mobile-mockup {
+                max-width: 100% !important;
                 height: 400px !important;
               }
             }
             @media (min-width: 1024px) {
-              img[alt="Mobile Mockup"] {
-                width: 100% !important;
+              .mobile-mockup {
+                max-width: 100% !important;
                 height: 600px !important;
               }
             }
           `}</style>
         </div>
 
+        {/* RIGHT SECTION */}
         <div className="right-section w-full md:w-1/2 flex flex-col items-center md:items-start !text-center md:text-left">
-          <p className="text-lg md:text-2xl mb-3">
+          <p className="text-lg md:text-2xl mb-3 font-bold">
             Explore better ways to manage your health with
           </p>
 
-          <img src={logo} alt="eAsha Healthcare" className="mb-1 w-40 logo-image" />
+          <img src={logo} alt="eAsha Healthcare" className="mb-4 w-40 logo-image" />
 
-          <img src={qrCode} alt="QR Code" className="w-40 h-40 mb-0 scanner-image" />
+          <img src={qrCode} alt="QR Code" className="w-40 h-40 mb-10 scanner-image" />
 
           <p className="text-sm font-bold !mb-8 download-text">
             Scan the QR code to download the app

@@ -32,16 +32,16 @@ const rightCards = [
 
 export default function OnlineCareFeatures() {
   return (
-    <div className="w-full bg-white !overflow-x-hidden px-[20px] md:px-[40px]" style={{ marginTop: '40px' }}>
-      <h2 className="font-urbanist text-center text-[24px] sm:text-[36px] md:text-[54px] font-bold mb-0 pb-0 mt-[24px] md:mt-[40px] leading-tight">
+    <div className="w-full bg-white !overflow-x-hidden px-[20px] md:px-[40px] mt-[50px]">
+      <h2 className="font-urbanist text-center text-[24px] sm:text-[36px] md:text-[54px] font-bold pb-0 mt-[24px] md:mt-[40px] leading-tight">
         <span className="text-[#013A63]">Experience</span> the Ease of Online Care
       </h2>
-      <div className="feature-grid grid grid-cols-2 gap-x-[16px] sm:gap-x-[24px] md:gap-x-[32px] w-full mt-[-20px] md:mt-[60px]">
-        <div className="flex flex-col gap-[32px] md:gap-[40px] pt-[60px] md:pt-[10px]">
+      <div className="feature-grid grid grid-cols-1 gap-[32px] w-full mt-[20px] md:mt-[60px] md:grid-cols-2">
+        <div className="flex flex-col gap-[32px] md:gap-[40px] pt-[20px]">
           {leftCards.map((card, idx) => (
             <div
               key={idx}
-              className="border border-[#D2CFCF] rounded-[20px] md:rounded-[32px] min-h-[320px] md:min-h-[472px] flex flex-col gap-[16px] md:gap-[24px] pt-[32px] md:pt-[48px] px-[20px] md:px-[32px] pb-[20px] md:pb-[32px] custom-card"
+              className="custom-card border border-[#D2CFCF] rounded-[20px] md:rounded-[32px] flex flex-col gap-[16px] md:gap-[24px] pt-[32px] md:pt-[48px] px-[20px] md:px-[32px] pb-[20px] md:pb-[32px] text-justify"
             >
               <div className="flex justify-center">
                 <div className="bg-[#00A99D] rounded-full flex items-center justify-center icon-wrapper">
@@ -61,11 +61,11 @@ export default function OnlineCareFeatures() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col gap-[32px] md:gap-[40px] pt-[120px] md:pt-[30px]">
+        <div className="flex flex-col gap-[32px] md:gap-[40px] pt-[20px]">
           {rightCards.map((card, idx) => (
             <div
               key={idx}
-              className="border border-[#D2CFCF] rounded-[20px] md:rounded-[32px] min-h-[320px] md:min-h-[472px] flex flex-col gap-[16px] md:gap-[24px] pt-[32px] md:pt-[48px] px-[20px] md:px-[32px] pb-[20px] md:pb-[32px] custom-card"
+              className="custom-card border border-[#D2CFCF] rounded-[20px] md:rounded-[32px] flex flex-col gap-[16px] md:gap-[24px] pt-[32px] md:pt-[48px] px-[20px] md:px-[32px] pb-[20px] md:pb-[32px]"
             >
               <div className="flex justify-center">
                 <div className="bg-[#00A99D] rounded-full flex items-center justify-center icon-wrapper">
@@ -87,110 +87,74 @@ export default function OnlineCareFeatures() {
         </div>
       </div>
       <style>{`
-        /* Below 425px: vertical cards + no horizontal gap */
-        @media (max-width: 424px) {
-          .feature-grid {
-            grid-template-columns: 1fr !important;
-            gap-x: 0 !important;
-            margin-left:40px
+        .custom-card {
+          min-height: 250px;
+        }
+
+        /* Mobile styles (<= 584px) */
+        @media (max-width: 584px) {
+          .custom-card {
+            min-height: unset;
+            padding-top: 16px;
+            padding-left: 12px;
+            padding-right: 12px;
+            gap: 10px;
+          }
+          .icon-wrapper {
+            width: 48px;
+            height: 48px;
+          }
+          .icon-img {
+            width: 24px;
+            height: 24px;
+          }
+          .mobile-title {
+            font-size: 16px !important;
+            line-height: 20px !important;
+          }
+          .mobile-text {
+            font-size: 12px !important;
+            line-height: 18px !important;
+          }
+        }
+        
+        /* Tablet styles (768px to 1024px) */
+        @media (min-width: 768px) and (max-width: 1024px) {
+          .custom-card {
+            min-height: 300px !important;
+            padding-top: 24px !important;
+            padding-bottom: 24px !important;
+            gap: 16px !important;
+          }
+          .icon-wrapper {
+            width: 80px;
+            height: 80px;
+          }
+          .icon-img {
+            width: 40px;
+            height: 40px;
+          }
+          .mobile-title {
+            font-size: 28px !important;
+            line-height: 32px !important;
+          }
+          .mobile-text {
+            font-size: 18px !important;
+            line-height: 24px !important;
           }
         }
 
-        @media (max-width: 584px) {
-          .custom-card {
-            width: 187px !important;
-            height: 169px !important;
-            border-radius: 12px !important;
-            padding-top: 10px !important;
-            padding-left: 8px !important;
-            padding-right: 8px !important;
-            gap: 6px !important;
-            min-height: unset !important;
-            
-          }
-          .icon-wrapper {
-            width: 38px !important;
-            height: 38px !important;
-          }
-          .icon-img {
-            width: 20px !important;
-            height: 20px !important;
-          }
-          .mobile-title {
-            font-size: 12px !important;
-            line-height: 16px !important;
-          }
-          .mobile-text {
-            font-size: 10px !important;
-            line-height: 14px !important;
-          }
-        }
-        @media (min-width: 585px) {
+        /* Desktop styles (>= 1025px) */
+        @media (min-width: 1025px) {
           .icon-wrapper {
             width: 120px !important;
             height: 120px !important;
           }
           .icon-img {
-            width: 60px !important; /* proportional to wrapper */
+            width: 60px !important;
             height: 60px !important;
           }
         }
-        /* Tablet view: <= 768px */
-        @media (min-width: 768px) and (max-width:1024px) {
-          .feature-grid > div:nth-child(2) {
-            padding-top: 220px !important; /* increase spacing from top */
-          }
-
-          /* Reduce heading font size */
-          h2 {
-            font-size: 36px !important;
-            line-height: 44px !important;
-          }
-
-          /* Adjust left & right columns padding */
-          .feature-grid > div {
-            padding-top: 80px !important;
-          }
-
-          /* Reduce card height and font sizes */
-          .custom-card {
-            min-height: 300px !important; /* smaller than desktop */
-            padding-top: 24px !important;
-            padding-bottom: 24px !important;
-            gap: 16px !important;
-          }
-
-          .custom-card .mobile-title,
-          .custom-card h5 {
-            font-size: 28px !important; /* reduce from desktop 41px */
-            line-height: 32px !important;
-          }
-
-          .custom-card .mobile-text,
-          .custom-card p {
-            font-size: 18px !important; /* reduce from desktop 24px */
-            line-height: 24px !important;
-          }
-
-          .icon-img {
-            width: 60px !important; /* proportional to wrapper */
-            height: 60px !important;
-          }
-        }
-
-        @media and (min-width:1025px){
-          .custom-card{
-            width:100% !important;
-          }
-        }
-          @media (max-width: 424px) {
-  /* Remove extra top space for the 3rd card (which is first card of right column on mobile) */
-  .feature-grid > div:nth-child(2) > div:nth-child(1) {
-    padding-top: 10px !important;
-    margin-top: -90px !important;
-  }
-}
-
       `}</style>
     </div>
   );

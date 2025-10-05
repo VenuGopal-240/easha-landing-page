@@ -47,32 +47,34 @@ const HealthServices = () => {
           lg:grid-cols-3 
           gap-8 force-3-cols
         "
-        style={{ marginTop: "40px", justifyItems: "center" }}
+        style={{ marginTop: "9px", justifyItems: "center" }}
       >
         {services.map((service, index) => (
-          <div
-            key={index}
-            className={`
-              bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 
-              flex flex-col items-center text-center
-              w-[220px] h-[180px] sm:w-[240px] sm:h-[190px] md:w-[260px] md:h-[200px] lg:w-[280px] lg:h-[213px]
-              card-width-adjust
-              ${index === 2 ? "sm:col-span-2 lg:col-span-1" : ""}
-            `}
-          >
-            <img
-              src={service.icon}
-              alt={service.title}
-              className="object-contain"
-              style={{ width: "64px", height: "64px", marginTop: "40px" }}
-            />
-            <h3 className="mt-4 text-base sm:text-lg font-semibold text-gray-900">
-              {service.title}
-            </h3>
-            <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed px-4">
-              {service.description}
-            </p>
-          </div>
+<div
+  key={index}
+  className={`
+    bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 
+    flex flex-col items-center text-center
+    w-full max-w-[220px] sm:max-w-[240px] md:max-w-[260px] lg:max-w-[280px]
+    min-h-[160px] sm:min-h-[190px] md:min-h-[200px] lg:min-h-[213px]
+    card-width-adjust
+    ${index === 2 ? "sm:col-span-2 lg:col-span-1" : ""}
+  `}
+>
+  <img
+    src={service.icon}
+    alt={service.title}
+    className="object-contain mt-6"
+    style={{ width: "40px", height: "55px" }}
+  />
+  <h4 className="mt-3 text-justify text-sm sm:text-base md:text-lg font-semibold text-gray-900">
+    {service.title}
+  </h4>
+  <p className="mt-1 text-justify text-xs sm:text-sm text-gray-600 leading-relaxed px-4">
+    {service.description}
+  </p>
+</div>
+
         ))}
       </div>
     </div>

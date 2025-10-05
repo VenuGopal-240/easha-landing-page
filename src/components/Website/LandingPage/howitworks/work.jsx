@@ -35,7 +35,7 @@ const steps = [
 
 const Works = () => {
   return (
-    <section className="w-full lg:py-12 px-4">
+    <section className="w-full lg:py-12 px-4 mt-10">
       <h1 className="text-center font-bold text-3xl mb-8">
         <span className="text-[#013A63]">How </span> it works
       </h1>

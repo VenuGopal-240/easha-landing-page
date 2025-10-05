@@ -130,10 +130,10 @@ const TestimonialsCarousel = () => {
   const dotsCount = Math.ceil(testimonials.length / 2);
 
   return (
-    <div className="min-h-screen py-8 sm:py-12 md:!pt-25 lg:!pb-26 px-4">
+    <div className="min-h-140 py-8 sm:py-7 md:!pt-25 lg:!pb-26 px-4">
       <div className="max-w-7xl mx-auto">
         <h1
-          className="text-![14px] md:!text-[54px] font-extrabold !font-extrabold text-center mb-8 sm:mb-12 !lg:mb-0"
+          className="text-![14px] md:!text-[54px] font-extrabold  text-center mb-8 sm:mb-12 !lg:mb-0"
           style={{ color: "#013A63" }}
         >
           Testimonials

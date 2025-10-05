@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Avatar } from "@mui/material";
 import SearchIcon from "../../../../assets/search.svg";
-import CheckIcon from "../../../../assets/done.svg";
+import Done from "../../../../assets/done.svg";
 import CalendarTodayIcon from "../../../../assets/Daterange.svg";
 
 const steps = [
@@ -12,7 +12,7 @@ const steps = [
       "Explore verified professionals across various specialties to find the one that fits your needs.",
   },
   {
-    icon: CheckIcon,
+    icon: Done,
     title: "Check Doctor Profile",
     description:
       "Check experience, patient reviews, consultation modes, and availability in one place.",

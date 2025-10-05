@@ -9,10 +9,10 @@ const GetInTouch = () => {
     <Box
       sx={{
         width: {
-          xs: "90%",
-          sm: "90%",
-          md: "90%",
-          lg: "1360px",
+          xs: "70%",
+          sm: "70%",
+          md: "70%",
+          lg: "1160px",
         },
         bgcolor: "#eaf6f7",
         borderTopRightRadius: {
@@ -88,7 +88,7 @@ const GetInTouch = () => {
           fontSize: { xs: "14px", sm: "15px" },
         }}
       >
-        Can’t find the answer you’re looking for? Please chat to our friendly team.
+        Can't find the answer you're looking for? Please chat to our friendly team.
       </Typography>
 
       <TextField

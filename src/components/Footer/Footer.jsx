@@ -9,10 +9,9 @@ import {
 } from "@mui/material";
 import appstore from "../../assets/appstore.png";
 import playstore from "../../assets/google.png";
-import Twitter from "../../assets/twitter.png";
-import Facebook from "../../assets/facebook.png";
+import In from "../../assets/inLogo.png";
 import Instagram from "../../assets/instagram.png";
-import Github from "../../assets/github.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const isMobile584 = useMediaQuery("(max-width:584px)");
@@ -22,7 +21,18 @@ const Footer = () => {
     height: isMobile584 ? 32 : 26,
     cursor: "pointer",
   };
+  const quickLinks = [
+    { label: "Home", path: "/" },
+    { label: "About Us", path: "/about-us" },
+    { label: "Our Services", path: "/our-services" },
+    { label: "FAQ", path: "/faq" },
+  ];
 
+  const helpLinks = [
+    { label: "Customer Support", path: "/customerSupport" },
+    { label: "Terms & Conditions", path: "/terms&conditions" },
+    { label: "Privacy Policy", path: "/privacypolicy" },
+  ];
   return (
     <Box
       sx={{
@@ -35,7 +45,6 @@ const Footer = () => {
         fontFamily: "Urbanist, sans-serif",
       }}
     >
-
       <Grid
         container
         spacing={4}
@@ -43,45 +52,58 @@ const Footer = () => {
         alignItems="flex-start"
         sx={{ maxWidth: "1200px", mx: "auto", textAlign: "left" }}
       >
-
         <Grid item xs={12} md={2}>
           <Typography fontWeight={600} fontSize="16px" gutterBottom>
             Quick Links
           </Typography>
-          {["Home", "About", "Services", "FAQ"].map((text) => (
+          {quickLinks.map(({ label, path }) => (
             <Typography
-              key={text}
+              key={label}
               fontSize="14px"
               color="text.secondary"
               mb={0.5}
-              sx={{ cursor: "pointer" }}
+              sx={{
+                cursor: "pointer",
+                textDecoration: "none",
+                display: "block",
+              }}
+              component={Link}
+              to={path}
+              underline="none"
             >
-              {text}
+              {label}
             </Typography>
           ))}
         </Grid>
 
-        <Grid item xs={12} md={2}>
+
+
+         <Grid item xs={12} md={2}>
           <Typography fontWeight={600} fontSize="16px" gutterBottom>
             Help
           </Typography>
-          {["Customer Support", "Terms & Conditions", "Privacy Policy"].map(
-            (text) => (
-              <Typography
-                key={text}
-                fontSize="14px"
-                color="text.secondary"
-                mb={0.5}
-                sx={{ cursor: "pointer" }}
-              >
-                {text}
-              </Typography>
-            )
-          )}
+          {helpLinks.map(({ label, path }) => (
+            <Typography
+              key={label}
+              fontSize="14px"
+              color="text.secondary"
+              mb={0.5}
+              sx={{
+                cursor: "pointer",
+                textDecoration: "none",
+                display: "block",
+              }}
+              component={Link}
+              to={path}
+              underline="none"
+            >
+              {label}
+            </Typography>
+          ))}
         </Grid>
 
-
-        <Grid item xs={12} md={2}>
+ 
+        {/* <Grid item xs={12} md={2}>
           <Typography fontWeight={600} fontSize="16px" gutterBottom>
             Contact
           </Typography>
@@ -96,8 +118,7 @@ const Footer = () => {
               {text}
             </Typography>
           ))}
-        </Grid>
-
+        </Grid> */}
 
         <Grid item xs={12} md={3}>
           <Typography fontWeight={600} fontSize="16px" gutterBottom>
@@ -117,7 +138,7 @@ const Footer = () => {
               src={appstore}
               alt="App Store"
               style={{
-                width: isMobile584 ? "50%" : 140,
+                width: isMobile584 ? "40%" : 140,
                 cursor: "pointer",
               }}
               onClick={() => window.open("https://apps.apple.com/", "_blank")}
@@ -126,7 +147,7 @@ const Footer = () => {
               src={playstore}
               alt="Google Play"
               style={{
-                width: isMobile584 ? "50%" : 140,
+                width: isMobile584 ? "40%" : 140,
                 cursor: "pointer",
               }}
               onClick={() =>
@@ -137,7 +158,7 @@ const Footer = () => {
         </Grid>
       </Grid>
 
-      <Divider sx={{ my: 5, maxWidth: "1200px", mx: "auto" }} />
+      <Divider sx={{ mt: 1, mb: 4, maxWidth: "1200px", mx: "auto" }} />
       <Box
         sx={{
           maxWidth: "1200px",
@@ -152,21 +173,27 @@ const Footer = () => {
         }}
       >
         <Typography variant="body2" color="text.secondary">
-          © Copyright 2025. All Rights Reserved by Easha24x7
+          © Copyright 2025. All Rights Reserved by Easha 24x7 Health Care Pvt
+          Ltd
         </Typography>
 
-        <Box sx={{ display: "flex", gap: 1 }}>
-          <MuiLink href="#" color="inherit">
-            <img src={Facebook} alt="Facebook" style={iconStyle} />
+        <Box sx={{ display: "flex", gap: 2, width: 200 }}>
+          <MuiLink
+            href="https://www.linkedin.com/company/easha24x7-healthcare-private-limited/"
+            color="inherit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={In} alt="linkedin" style={iconStyle} />
           </MuiLink>
-          <MuiLink href="#" color="inherit">
-            <img src={Twitter} alt="Twitter" style={iconStyle} />
-          </MuiLink>
-          <MuiLink href="#" color="inherit">
+
+          <MuiLink
+            href="https://www.instagram.com/easha.health/?hl=en"
+            color="inherit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={Instagram} alt="Instagram" style={iconStyle} />
-          </MuiLink>
-          <MuiLink href="#" color="inherit">
-            <img src={Github} alt="Github" style={iconStyle} />
           </MuiLink>
         </Box>
       </Box>

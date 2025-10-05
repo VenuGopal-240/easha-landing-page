@@ -2,7 +2,7 @@ import React from "react";
 import specialistDoctors from "../../../assets/specialist-doctors.png";
 
 const WhyChooseUs = () => (
-  <section className="container py-5 mobile-bottom-space">
+  <section className="container py-0 mobile-bottom-space">
     <style>
       {`
         @media (max-width: 374.98px) {
