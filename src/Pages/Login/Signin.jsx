@@ -4,6 +4,7 @@ import Eashalogo from "../../assets/Eashalogo.png";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const SignUpSchema = Yup.object().shape({
   fullName: Yup.string()
@@ -319,7 +320,7 @@ function Signin() {
                     <p className="mt-3 text-muted small text-center text-md-start">
                       Already registered?{" "}
                       <span
-                        onClick={() => navigate("/login")}
+                        onClick={() => navigate("http://localhost:5174/")}
                         className="text-decoration-none"
                         style={{ color: "#00A99D", cursor: "pointer" }}
                       >

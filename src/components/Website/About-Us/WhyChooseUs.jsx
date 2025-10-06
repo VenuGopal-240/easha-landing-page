@@ -40,7 +40,7 @@ const WhyChooseUs = () => (
       `}
     </style>
 
-    <div className="row align-items-center">
+    <div className="row align-items-center mt-3">
       <div className="col-12 col-md-6 order-md-2 text-center mb-3 mb-md-0">
         <img
           src={specialistDoctors}
