@@ -98,25 +98,31 @@ const Navbar = () => {
           <span className="login-divider">/</span>
 
           {/* Signup Dropdown */}
-          <div className="signup-dropdown">
-            <span className="signup-link">Sign Up ▾</span>
-            <div className="signup-options">
-              <NavLink
-                to={`${API_BASE_URL}/signup`}
-                className="signup-option"
-              >
-                Sign Up as User
-              </NavLink>
+        <div className="signup-dropdown">
+  <span className="signup-link">Sign Up ▾</span>
+  <div className="signup-options">
+    {/* User Signup - external URL */}
+    <a
+      href={`${API_BASE_URL}/signup`}
+      className="signup-option"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Sign Up as User
+    </a>
 
-              {/* Doctor Signup - Local route */}
-              <NavLink
-                to={`${API_BASE_URL}/register`}
-                className="signup-option"
-              >
-                Sign Up as Doctor
-              </NavLink>
-            </div>
-          </div>
+    {/* Doctor Signup - external URL */}
+    <a
+      href={`${API_BASE_URL}/register`}
+      className="signup-option"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Sign Up as Doctor
+    </a>
+  </div>
+</div>
+
         </div>
       </div>
     </nav>
