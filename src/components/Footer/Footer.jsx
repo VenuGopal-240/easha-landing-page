@@ -30,8 +30,14 @@ const Footer = () => {
 
   const helpLinks = [
     { label: "Customer Support", path: "/customerSupport" },
-    { label: "Terms & Conditions", path: "/terms&conditions" },
+    { label: "Terms & Conditions", path: "/terms-and-conditions" },
     { label: "Privacy Policy", path: "/privacypolicy" },
+    { label: "Cancellation & Refunds", path: "/cancellation-and-refunds" },
+  ];
+
+
+    const contactLinks = [
+    { label: "Contact Us", path: "/Contact-Us" },
   ];
   return (
     <Box
@@ -103,22 +109,30 @@ const Footer = () => {
         </Grid>
 
  
-        {/* <Grid item xs={12} md={2}>
+         <Grid item xs={12} md={2}>
           <Typography fontWeight={600} fontSize="16px" gutterBottom>
             Contact
           </Typography>
-          {["Mail", "Number"].map((text) => (
+          {contactLinks.map(({ label, path }) => (
             <Typography
-              key={text}
+              key={label}
               fontSize="14px"
               color="text.secondary"
               mb={0.5}
-              sx={{ cursor: "pointer" }}
+              sx={{
+                cursor: "pointer",
+                textDecoration: "none",
+                display: "block",
+              }}
+              component={Link}
+              to={path}
+              underline="none"
             >
-              {text}
+              {label}
             </Typography>
           ))}
-        </Grid> */}
+        </Grid>
+
 
         <Grid item xs={12} md={3}>
           <Typography fontWeight={600} fontSize="16px" gutterBottom>
