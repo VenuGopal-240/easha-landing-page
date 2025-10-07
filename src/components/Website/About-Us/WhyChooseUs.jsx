@@ -45,7 +45,7 @@ const WhyChooseUs = () => (
         <img
           src={specialistDoctors}
           alt="Specialist Doctors"
-          className="img-fluid rounded shadow-lg"
+          className="img-fluid rounded shadow-lg mt-4"
         />
       </div>
 
