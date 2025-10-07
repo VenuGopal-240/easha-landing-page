@@ -47,16 +47,17 @@ import ScrollTop from "./components/ScrollTop";
 import TermsAndCondition from "./Pages/Help/TermsAndCondition";
 import PrivacyPolicy from "./Pages/Help/PrivacyPolicy";
 import Customer from "./Pages/Help/Customer";
+import Contact from "./Pages/Help/Contact";
+import CancellationAndRefunds from "./Pages/Help/CancellationAndRefunds";
 
 function App() {
-  const location = useLocation();
-  const hideUIForAuthPages = location.pathname === "/login" || location.pathname === "/signin" || location.pathname === "/Registration" || location.pathname === "/forgot-password" || location.pathname === "/create-password";
+  // const location = useLocation();
+  // const hideUIForAuthPages = location.pathname === "/login" || location.pathname === "/signin" || location.pathname === "/Registration" || location.pathname === "/forgot-password" || location.pathname === "/create-password";
 
   return (
     <>
         <ScrollTop />
 
-      {!hideUIForAuthPages && (
         <>
           <Navbar />
           <Chatbot />
@@ -64,7 +65,7 @@ function App() {
             <OffCanvas />
           </div>
         </>
-      )}
+      
 
       <Routes>
         <Route
@@ -121,23 +122,23 @@ function App() {
           }
         />
 
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login" element={<Login />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/Registration"  element={<Registration />} />
                 <Route path="/forgot-password" element={<Forgotpassword />} />
-        <Route path="/create-password" element={<Createpassword />} />
+        <Route path="/create-password" element={<Createpassword />} /> */}
 <Route path="/faq" element={<Faqs />} />
-<Route path="/terms&conditions" element={<TermsAndCondition />} />
+<Route path="/terms-and-conditions" element={<TermsAndCondition />} />
 <Route path="/privacypolicy" element={<PrivacyPolicy />} />
 <Route path="/customerSupport" element={<Customer />} />
+<Route path="/Contact-Us" element={<Contact />} />
+<Route path="/cancellation-and-refunds" element={<CancellationAndRefunds />} />
       </Routes>
 
-      {!hideUIForAuthPages && (
         <>
           <GetInTouch />
           <Footer />
         </>
-      )}
     </>
   );
 }
