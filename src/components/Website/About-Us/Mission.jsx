@@ -4,11 +4,11 @@ import Eashafounder from "../../../assets/easha-founder.jpg";
 // import Eashaceo from "../../../assets/easha-ceo.jpg"; 
 // import Eashaceo from "../../../assets/easha-ceo-final.jpg";
 // import Eashaceo from "../../../assets/Easha-ceo-final.jpg";
-import Eashaceo from "../../../assets/CEO-FINAL.jpg";
+import Eashaceo from "../../../assets/ceo.jpg";
 const VisionMission = () => {
   return (
     <Container fluid className="py-5 px-4" style={{ backgroundColor: "#e6f2f3" }}>
-      
+
       {/* Vision Section */}
       <Row className="gx-0 mb-5 align-items-center">
         <Col xs={12} md={7} className="ms-auto">
@@ -57,12 +57,13 @@ const VisionMission = () => {
               width: "100%",
               maxWidth: "250px",
               borderRadius: "50%",
-              height:"240px",
+              height: "240px",
               border: "6px solid #00A99D",
               boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
             }}
           />
-          <h5 className="mt-3" style={{ color: "#0f1111ff" }}>Ms.Kasula Vaishnavi</h5>
+          {/* <h5 className="mt-3" style={{ color: "#0f1111ff" }}>Ms.Kasula Vaishnavi</h5> */}
+          <h5 className="mt-3" style={{ color: "#0f1111ff" }}>Ms. Nadimidoddi Salomi</h5>
           <h6 className="mt-1" style={{ color: "#0f1111ff" }}>Easha CEO</h6>
         </Col>
       </Row>
